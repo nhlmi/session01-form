@@ -11,40 +11,40 @@
              required
              name="stockName"
              #stockName="ngModel"
-             [(ngModel)]="stock.name">
+             ngModel
+             >
     </div>
-    <div>
+    <!-- <div>
       The following element change from green to red when it has been modified
-    </div>    
+    </div>     -->
+
     <div class="stock-code">
       <input type="text"
              placeholder="Stock Code"
-             name="stockCode"
+             name="code"
              required
              minlength="2"
              #stockCode="ngModel"
-             [(ngModel)]="stock.code">
+             ngModel>
     </div>
 
-    <div *ngIf="stockCode.dirty && stockCode.invalid">
+    <!-- <div *ngIf="stockCode.dirty && stockCode.invalid">
       <div *ngIf="stockCode.errors?.['required']">
         stock code is mandatory
       </div>
       <div *ngIf="stockCode.errors?.['minlength']">
         stock code must be at least 2
       </div>
-    </div>
+    </div> -->
     <div>
       The following element change from green to red when it is visited by user regardless of change
     </div>    
     <div class="stock-price">
       <input type="number"
              placeholder="Stock Price"
-             name="stockPrice"
+             name="price"
              required
-             #stockPrice=""ngModel=""
-             [ngModel]="stock.price"
-             (ngModelChange)="setStockPrice($event)">
+             ngModel>
     </div>
     <div class="stock-exchange">
       <div>

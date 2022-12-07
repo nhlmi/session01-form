@@ -23,10 +23,15 @@ export class CreateStockComponent {
   createStock(stockForm: any) {
     console.log('stock form ', this.stock);
     if(stockForm.valid){
+      this.stock = stockForm.value.stock;
       console.log('creating stock', stockForm);
     }
     else{
       console.error('stock form is in valid state');
     }
   }
+
+
+
+
 }
